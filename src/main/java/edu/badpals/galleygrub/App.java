@@ -7,8 +7,11 @@ import edu.badpals.galleygrub.extras.SauceExtra;
 import edu.badpals.galleygrub.extras.sizeLargeExtra;
 import edu.badpals.galleygrub.items.Item;
 import edu.badpals.galleygrub.items.RetailPrice;
+import edu.badpals.galleygrub.items.Product;
 import edu.badpals.galleygrub.order.Order;
+import edu.badpals.galleygrub.order.Comanda;
 import edu.badpals.galleygrub.receipt.Receipt;
+import edu.badpals.galleygrub.receipt.Ticket;
 
 /**
  *
@@ -217,7 +220,6 @@ public class App
         receiptExtra.total();
         receiptExtra.print();
     }
-
     public static void display(Product item) {
         System.out.print("\t" + item.toString() + "\n");
     }
