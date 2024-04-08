@@ -1,4 +1,4 @@
 package edu.badpals.galleygrub.extras;
 
-public class Regular {
+public class Regular extends Extra{
 }

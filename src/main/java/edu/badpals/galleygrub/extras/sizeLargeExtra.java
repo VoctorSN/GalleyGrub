@@ -1,4 +1,4 @@
 package edu.badpals.galleygrub.extras;
 
-public class sizeLargeExtra {
+public class sizeLargeExtra extends Extra{
 }
