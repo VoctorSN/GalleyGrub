@@ -1,6 +1,6 @@
 package edu.badpals.galleygrub.receipt;
 
-import edu.badpals.galleygrub.extras.Extra;
+import edu.badpals.galleygrub.extras.Extras;
 import edu.badpals.galleygrub.order.Comanda;
 
 public class Receipt implements Ticket{
@@ -15,24 +15,17 @@ public class Receipt implements Ticket{
         return this.order;
     }
 
-    @Override
-    public void setChain(Extra extra) {
 
-    }
-
-    @Override
-    public Extra getChain() {
-        return null;
-    }
 
     @Override
     public Double total() {
-        return this.getOrder().getTotal();
+        this.sumExtrasCharge();
+        return this.total + this.getOrder().getTotal();
     }
 
     @Override
     public void sumExtrasCharge() {
-
+        total = getOrder().itemList().stream().filter(item-> !item.isRegular()).mapToDouble(item -> Extras.valueOf(item.extra().toUpperCase()).getPrice()).sum();
     }
 
     @Override

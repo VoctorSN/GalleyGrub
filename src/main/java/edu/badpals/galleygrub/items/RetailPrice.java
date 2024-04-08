@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class RetailPrice {
 
-    static HashMap<String,Double> prices = new HashMap<>();
+    public static HashMap<String,Double> prices = new HashMap<>();
     RetailPrice(){}
     public static void init_prices() {
 
